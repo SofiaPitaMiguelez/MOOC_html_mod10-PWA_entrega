@@ -35,6 +35,9 @@ class Game {
             document.getElementById("reset").addEventListener("click", () => {
                 this.resetGame();
             });
+            document.addEventListener("install").addEventListener("click", () =>{
+                this.installGame();
+            })
             this.started = true;
             this.width = window.innerWidth;
             this.height = window.innerHeight;

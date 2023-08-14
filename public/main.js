@@ -34,4 +34,14 @@ document.addEventListener("DOMContentLoaded", () => {
         game = new Game();
         game.start();
     }
-);
+)
+
+window.addEventListener('beforeinstallprompt', event => {
+    event.preventDefault();
+    const installButton = document.getElementById('installButton');
+    installButton.style.display = 'block';
+    installButton.addEventListener('click', () => {
+      event.prompt();
+    });
+  });
+  
